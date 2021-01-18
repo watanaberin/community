@@ -1,0 +1,7 @@
+2021-01-18 21:04:30,249 INFO [main] c.s.c.c.LoggerTests [StartupInfoLogger.java:55] Starting LoggerTests using Java 1.8.0_201 on LAPTOP-T8LLPIAD with PID 11060 (started by 渡边理佐 in D:\springcode\community)
+2021-01-18 21:04:30,253 INFO [main] c.s.c.c.LoggerTests [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-01-18 21:04:33,278 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-18 21:04:33,444 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2021-01-18 21:04:33,901 INFO [main] c.s.c.c.LoggerTests [StartupInfoLogger.java:61] Started LoggerTests in 4.529 seconds (JVM running for 6.412)
+2021-01-18 21:04:34,353 INFO [main] c.s.c.c.LoggerTests [LoggerTests.java:21] info log
+2021-01-18 21:04:34,421 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'

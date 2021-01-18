@@ -1,0 +1,11 @@
+2021-01-18 20:49:35.986  INFO 6708 --- [main] c.s.community.community.LoggerTests      : Starting LoggerTests using Java 1.8.0_201 on LAPTOP-T8LLPIAD with PID 6708 (started by 渡边理佐 in D:\springcode\community)
+2021-01-18 20:49:35.988 DEBUG 6708 --- [main] c.s.community.community.LoggerTests      : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-01-18 20:49:35.990  INFO 6708 --- [main] c.s.community.community.LoggerTests      : No active profile set, falling back to default profiles: default
+2021-01-18 20:49:38.500  INFO 6708 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-18 20:49:38.852  INFO 6708 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-01-18 20:49:39.793  INFO 6708 --- [main] c.s.community.community.LoggerTests      : Started LoggerTests in 4.402 seconds (JVM running for 6.487)
+2021-01-18 20:49:40.209 DEBUG 6708 --- [main] c.s.community.community.LoggerTests      : debug log
+2021-01-18 20:49:40.210  INFO 6708 --- [main] c.s.community.community.LoggerTests      : info log
+2021-01-18 20:49:40.210  WARN 6708 --- [main] c.s.community.community.LoggerTests      : warn log
+2021-01-18 20:49:40.211 ERROR 6708 --- [main] c.s.community.community.LoggerTests      : error log
+2021-01-18 20:49:40.275  INFO 6708 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
