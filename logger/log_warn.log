@@ -1,1 +1,2 @@
-2021-01-18 21:04:34,355 WARN [main] c.s.c.c.LoggerTests [LoggerTests.java:22] warn log
+2021-02-02 15:12:30,186 WARN [http-nio-8080-exec-8] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2021-02-02 15:53:26,694 WARN [http-nio-8080-exec-7] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
