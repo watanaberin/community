@@ -1,8 +1,10 @@
 package com.social.community.community;
 
+import com.social.community.community.dao.CommentMapper;
 import com.social.community.community.dao.DiscussPostMapper;
 import com.social.community.community.dao.LoginTicketMapper;
 import com.social.community.community.dao.UserMapper;
+import com.social.community.community.entity.Comment;
 import com.social.community.community.entity.DiscussPost;
 import com.social.community.community.entity.LoginTicket;
 import com.social.community.community.entity.User;
@@ -24,6 +26,9 @@ public class MapperTests {
     private DiscussPostMapper discussPostMapper;
     @Autowired
     private LoginTicketMapper loginTicketMapper;
+    @Autowired
+    private CommentMapper commentMapper;
+
     @Test
     public void  testSelectUser(){
         User user=userMapper.selectById(101);
@@ -88,5 +93,13 @@ public class MapperTests {
         loginTicket=loginTicketMapper.selectByTicket("abc");
         System.out.println(loginTicket);
 
+    }
+    @Test
+    public void CommentMapperTests(){
+        List<Comment> comments=commentMapper.selectCommentsByEntity(1,228,0,10);
+        if(comments==null) System.out.println("no comments found");
+        for(Comment comment :comments){
+            System.out.println(comment);
+        }
     }
 }

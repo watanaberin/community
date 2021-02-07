@@ -1,6 +1,7 @@
 package com.social.community.community.service;
 
 import com.social.community.community.dao.AlphaDao;
+import com.social.community.community.dao.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
@@ -28,4 +29,6 @@ public class AlphaService {
     public  String find(){
         return alphaDao.select();
     }
+
+
 }
