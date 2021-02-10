@@ -75,9 +75,28 @@ public class MessageController {
         }
         model.addAttribute("letters",letters);
 
+        //设置已读
+        List<Integer> ids =getLetterIds(letterList);
+        if(!ids.isEmpty()){
+            messageService.readMessage(ids);
+        }
         model.addAttribute("target",getLetterTarget(conversationId));
         return "site/letter-detail";
     }
+    private List<Integer> getLetterIds(List<Message> LetterList){
+        List<Integer> ids= new ArrayList<>();
+        if(LetterList != null){
+            for(Message message :LetterList){
+                if(hostHolder.getUser().getId() ==message.getToId() && message.getStatus() ==0){
+                    ids.add(message.getId());
+                }
+            }
+        }
+        return ids;
+    }
+
+
+
 
     private User getLetterTarget(String conversationId){
         String[] ids=conversationId.split("_");
