@@ -2,7 +2,7 @@ package com.social.community.community;
 
 import com.social.community.community.dao.*;
 import com.social.community.community.entity.*;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
@@ -62,7 +62,7 @@ public class MapperTests {
 
     @Test
     public void discussPostTest(){
-        List<DiscussPost> result=discussPostMapper.selectDiscussPosts(149,0,10);
+        List<DiscussPost> result=discussPostMapper.selectDiscussPosts(149,0,10,0);
         for(DiscussPost discussPost :result){
             System.out.println(discussPost);
         }

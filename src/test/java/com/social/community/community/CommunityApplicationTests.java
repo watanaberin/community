@@ -1,7 +1,7 @@
 package com.social.community.community;
 
 import com.social.community.community.dao.AlphaDao;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
