@@ -171,7 +171,6 @@ public class UserService implements CommunityConstant {
             map.put("oldpswdMsg","请输入正确的原始密码。");
             return map;
         }
-
         if(oldPassword.equals(newPassword)){
             map.put("newpswdMsg","新的密码和旧密码应不一致。");
             return map;
@@ -180,8 +179,8 @@ public class UserService implements CommunityConstant {
             map.put("newpswdMsg","密码的长度需超过8位。");
             return map;
         }
-        String modifiedpswd=CommunityUtil.md5(newPassword+user.getSalt());
-        userMapper.updatePassword(user.getId(),modifiedpswd);
+        String modifiedPswd=CommunityUtil.md5(newPassword+user.getSalt());
+        userMapper.updatePassword(user.getId(),modifiedPswd);
         return map;
     }
     public User findUserByName(String name){

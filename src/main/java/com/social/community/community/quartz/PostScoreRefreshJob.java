@@ -49,22 +49,22 @@ public class PostScoreRefreshJob implements Job , CommunityConstant {
         String redisKey= RedisKeyUtil.getPostScoreKey();
         BoundSetOperations operations=redisTemplate.boundSetOps(redisKey);
         if(operations.size()==0){
-            logger.info("[任务取消]，没有需要刷新的帖子。");
+            logger.info("[任务取消]，没有需要刷新的问题。");
             return;
         }
-        logger.info("[任务开始] 正在刷新帖子分数："+operations.size());
+        logger.info("[任务开始] 正在刷新问题分数："+operations.size());
             while(operations.size()>0){
                 this.refresh((Integer) operations.pop());
             }
 
-        logger.info("[任务结束] 刷新帖子分数完毕。");
+        logger.info("[任务结束] 刷新问题分数完毕。");
 
     }
     private void refresh(int postId){
         DiscussPost post=discussPostService.findDiscussPostById(postId);
 
         if(post==null){
-            logger.error("该帖子不存在："+postId);
+            logger.error("该问题不存在："+postId);
             return;
         }
         boolean wonderful=post.getStatus()==1;

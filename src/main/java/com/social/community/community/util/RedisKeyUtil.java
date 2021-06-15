@@ -4,6 +4,7 @@ public class RedisKeyUtil {
     private static final String SPLIT=":";
     private static final String PREFIX_ENTITY_LIKE="like:entity";
     private static final String PREFIX_USER_LIKE="like:user";
+    private static final String PREFIX_USER_DISLIKE="dislike:user";
     private static final String PREFIX_FOLLOWEE="followee";
     private static final String PREFIX_FOLLOWER="follower";
     private static final String PREFIX_KAPTCHA="kaptcha";
@@ -17,9 +18,13 @@ public class RedisKeyUtil {
     public static String getEntityLikeKey(int entityType,int entityId){
         return PREFIX_ENTITY_LIKE+SPLIT + entityType + SPLIT + entityId;
     }
-    //用户德赞
+    //用户的赞
     public static String getUserLikeKey(int userId){
         return PREFIX_USER_LIKE + SPLIT + userId;
+    }
+    //用户的不赞同
+    public static String getUserDislikeKey(int userId){
+        return PREFIX_USER_DISLIKE + SPLIT + userId;
     }
     //某个用户关注的
     //followee:userId:entityType -> zset(entityId,now)

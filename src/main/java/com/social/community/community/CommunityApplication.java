@@ -10,7 +10,6 @@ public class CommunityApplication {
 
 	@PostConstruct
 	public void init(){
-
 		//解决netty冲突
 		System.setProperty("es.set.netty.runtime.available.processors","false");
 	}

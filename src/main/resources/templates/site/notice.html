@@ -92,7 +92,7 @@
 								<a th:href="@{/notice/detail/comment}">
 									用户
 									<i th:utext="${commentNotice.user.username}">nowcoder</i>
-									评论了你的<b th:text="${commentNotice.entityType==1?'帖子':'回复'}">帖子</b> ...</a>
+									评论了你的<b th:text="${commentNotice.entityType==1?'问题':'回复'}">问题</b> ...</a>
 								<ul class="d-inline font-size-12 float-right">
 									<li class="d-inline ml-2"><span class="text-primary">共 <i th:text="${commentNotice.count}">3</i> 条会话</span></li>
 								</ul>
@@ -113,7 +113,7 @@
 								<a th:href="@{/notice/detail/like}">
 									用户
 									<i th:utext="${likeNotice.user.username}">username</i>
-									点赞了你的<b th:text="${likeNotice.entityType==1?'帖子':'回复'}">帖子</b> ...</a>
+									点赞了你的<b th:text="${likeNotice.entityType==1?'问题':'回复'}">问题</b> ...</a>
 								<ul class="d-inline font-size-12 float-right">
 									<li class="d-inline ml-2"><span class="text-primary" >共 <i th:text="${likeNotice.count}">3</i> 条会话</span></li>
 								</ul>
@@ -183,7 +183,7 @@
 						</div>
 						<div class="row">
 							<div class="col">
-								<ul class="nav btn-group-vertical company-info">
+								<ul class="nav btn-group-vertical company-info" th:fragment="foot">
 									<li class="nav-item text-white-50">
 										公司地址：北京市朝阳区大屯路东金泉时代3-2708北京牛客科技有限公司
 									</li>

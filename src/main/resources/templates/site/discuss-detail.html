@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
 	<link rel="stylesheet" th:href="@{/css/global.css}" />
 	<link rel="stylesheet" th:href="@{/css/discuss-detail.css}" />
-	<title>牛客网-帖子详情</title>
+	<title>牛客网-问答详情</title>
 </head>
 <body>
 	<div class="nk-container">
@@ -70,9 +70,9 @@
 					<div class="float-right">
 						<input type="hidden" id="postId" th:value="${post.id}">
 						<button type="button" class="btn btn-danger btn-sm" id="topBtn"
-						th:disabled="${post.type==1}" sec:authorize="hasAnyAuthority('moderator')">置顶</button>
+						th:disabled="${post.type==1}" sec:authorize="hasAnyAuthority('admin')">回答置顶</button>
 						<button type="button" class="btn btn-danger btn-sm" id="wonderfulBtn"
-								th:disabled="${post.status==1}" sec:authorize="hasAnyAuthority('moderator')">加精</button>
+								th:disabled="${post.status==1}" sec:authorize="hasAnyAuthority('admin')">精彩问答</button>
 						<button type="button" class="btn btn-danger btn-sm" id="deleteBtn"
 								th:disabled="${post.status==2}" sec:authorize="hasAnyAuthority('admin')">删除</button>
 					</div>
@@ -91,7 +91,7 @@
 									<b th:text="${likeStatus==1?'已赞':'赞'}">赞</b> <i th:text="${likeCount}">11</i>
 								</a></li>
 								<li class="d-inline ml-2">|</li>
-								<li class="d-inline ml-2"><a href="#replyform" class="text-primary">回帖 <i th:text="${post.commentCount}">nums</i></a></li>
+								<li class="d-inline ml-2"><a href="#replyform" class="text-primary">回答 <i th:text="${post.commentCount}">nums</i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -106,7 +106,7 @@
 				<!-- 回帖数量 -->
 				<div class="row">
 					<div class="col-8">
-						<h6><b class="square"></b> <i th:text="${post.commentCount}">多少</i>条回帖</h6>
+						<h6><b class="square"></b> <i th:text="${post.commentCount}">多少</i>条回答</h6>
 					</div>
 					<div class="col-4 text-right">
 						<a href="#replyform" class="btn btn-primary btn-sm">&nbsp;&nbsp;回&nbsp;&nbsp;帖&nbsp;&nbsp;</a>
@@ -262,7 +262,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col">
+							<div class="col" th:replace="index::foot">
 								<ul class="nav btn-group-vertical company-info">
 									<li class="nav-item text-white-50">
 										公司地址：北京市朝阳区大屯路东金泉时代3-2708北京牛客科技有限公司

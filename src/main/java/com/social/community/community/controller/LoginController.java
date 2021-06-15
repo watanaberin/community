@@ -90,6 +90,7 @@ public class LoginController implements CommunityConstant {
             model.addAttribute("msg", "激活成功，您的账户可以正常使用了。");
             model.addAttribute("target", address);
         }else if(result==ACTIVATION_REPEAT){
+        }else if(result==ACTIVATION_REPEAT){
             String address=contextPath+"/index";
             model.addAttribute("msg", "无效操作，您的账户已经激活过了。");
             model.addAttribute("target", address);

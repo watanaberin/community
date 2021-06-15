@@ -26,6 +26,7 @@ public class AlphaController {
         response.addCookie(cookie);
         return "set cookie";
     }
+
     @RequestMapping(value = "/cookie/get",method = RequestMethod.GET)
     @ResponseBody
     public String getCookie(@CookieValue("code") String code){

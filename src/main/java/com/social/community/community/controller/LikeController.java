@@ -8,7 +8,6 @@ import com.social.community.community.util.CommunityConstant;
 import com.social.community.community.util.CommunityUtil;
 import com.social.community.community.util.HostHolder;
 import com.social.community.community.util.RedisKeyUtil;
-import jdk.internal.org.objectweb.asm.Handle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
@@ -68,7 +67,5 @@ public class LikeController implements CommunityConstant {
         }
         return CommunityUtil.getJSONString(0, null, map);
 
-
-        
     }
 }
